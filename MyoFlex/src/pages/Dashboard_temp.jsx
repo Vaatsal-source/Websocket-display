@@ -36,7 +36,7 @@ export default function Dashboard() {
   });
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8765");
+    const ws = new WebSocket("wss://websocket-display.onrender.com");
 
     ws.onopen = () => setConnected(true);
     ws.onmessage = (event) => {
